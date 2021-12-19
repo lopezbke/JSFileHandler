@@ -1,6 +1,6 @@
 {
   "name": "jsfilehandler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Upload files using JavaScript",
   "main": "dist/JSFileUploader_min.js",
   "scripts": {
