@@ -1,4 +1,4 @@
-# JsFileUpload
+# JSFileHandler
 ================
 
 ## Install using npm
