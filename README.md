@@ -6,3 +6,58 @@
 ```
 npm i jsfilehandler
 ```
+## Usage
+
+Example with an upload button
+```html
+<head>
+    <script>
+      // Code must be inside an async function
+        async function UploadFile() {
+
+            // HTML Input Element that will upload files
+            const fileUploaderElement = document.querySelector("#myFileInput");
+
+            // Instantiates a new JSFileUploader object and pass the HTML Element that contains the file attached
+            const jsfileUploader = new JSFileUploader(fileUploaderElement);
+
+            // Generates a file object example below:
+            /*  { FileName : String, FileType: String, 
+                FileContent: Byte[], FileExtension: String, 
+                FileSize : String, LastModifiedDate: String}
+                */
+            const fileObject = await jsfileUploader.GenerateFileObject();
+
+        }
+    </script>
+</head>
+<body>
+    <input type="file" id="myFileInput">
+    <button type="button" onclick="UploadFile();">Upload</button>
+</body>
+```
+Example with no upload button
+
+```html
+<head>
+    <script>
+      // Code must be inside an async function
+        async function UploadFile(htmlElement) {
+
+            // Instantiates a new JSFileUploader object and pass the HTML Element that contains the file attached
+            const jsfileUploader = new JSFileUploader(htmlElement);
+
+            // Generates a file object example below:
+            /*  { FileName : String, FileType: String, 
+                FileContent: Byte[], FileExtension: String, 
+                FileSize : String, LastModifiedDate: String}
+                */
+            const fileObject = await jsfileUploader.GenerateFileObject();
+
+        }
+    </script>
+</head>
+<body>
+    <input type="file" id="myFileInput" onchange="UploadFile(this)">
+</body>
+```
