@@ -9,9 +9,6 @@ npm i jsfilehandler
 ## Usage
 
 ```html
-<script src="https://unpkg.com/petite-vue" defer init></script>
-
-<!-- anywhere on the page -->
 <head>
     <script>
       // Code must be inside an async function
