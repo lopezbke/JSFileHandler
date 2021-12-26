@@ -47,11 +47,7 @@ Example With No Upload Button
             // Instantiates a new JSFileUploader object and pass the HTML Element that contains the file attached
             const jsfileUploader = new JSFileUploader(htmlElement);
 
-            // Generates a file object example below:
-            /*  { FileName : String, FileType: String, 
-                FileContent: Byte[], FileExtension: String, 
-                FileSize : String, LastModifiedDate: String}
-                */
+            // Generates a file object
             const fileObject = await jsfileUploader.GenerateFileObject();
 
         }
