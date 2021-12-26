@@ -65,3 +65,36 @@ The most important property would be the FileContent which is a byte[] that coul
 ![image](https://user-images.githubusercontent.com/61566348/147399094-3fd11de4-494c-48d0-bda4-a04c2adf736d.png)
 
 
+## Other Functions
+
+DownloadFile()
+SaveToSessionStorage()
+GetFromSessionStorage()
+SaveToLocalStorage()
+GetFromLocalStorage()
+
+```html
+    
+<script>
+    const jsFileHandler = new JSFileUploader(htmlElement);
+    
+    // Downloading a file is simple just pass in the FileCotent ByteArray and FileTyppe.
+    jsFileHandler.DownloadFile({
+        FileContent: someByteArrayVar,
+        FileType: "image/png"
+    });
+    
+    // Or ideally pass in the object created by the GenerateFileObject function
+    const fileObject = await jsFileHandler.GenerateFileObject();
+    jsFileHandler.DownloadFile(fileObject);
+    
+    // You can save the file object to session storage like in the example below
+    SaveToSessionStorage("thisIsMyKey", fileObject)
+    
+    // Session Storage retreival
+     const myNewFileObject = GetFromSessionStorage("thisIsMyKey");
+    
+</script>
+```
+
+
