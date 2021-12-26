@@ -1,14 +1,14 @@
 # JSFileHandler
 ================
 
-## Install using npm
+## Install Using NPM
 
 ```
 npm i jsfilehandler
 ```
 ## Usage
 
-Example with an upload button
+Example With An Upload Button
 ```html
 <head>
     <script>
@@ -36,7 +36,7 @@ Example with an upload button
     <button type="button" onclick="UploadFile();">Upload</button>
 </body>
 ```
-Example with no upload button
+Example With No Upload Button
 
 ```html
 <head>
@@ -65,5 +65,7 @@ Example with no upload button
 ## Example Of Generated File Object
 
 The most important property would be the FileContent which is a byte[] that could be stored in the Database as varbinary.
-![image](https://user-images.githubusercontent.com/61566348/147399017-c34dc9a2-15c9-4dd9-bbe5-f4fd54d2c371.png)
+
+![image](https://user-images.githubusercontent.com/61566348/147399094-3fd11de4-494c-48d0-bda4-a04c2adf736d.png)
+
 
