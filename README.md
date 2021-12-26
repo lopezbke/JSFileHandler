@@ -89,10 +89,10 @@ GetFromLocalStorage()
     jsFileHandler.DownloadFile(fileObject);
     
     // You can save the file object to session storage like in the example below
-    SaveToSessionStorage("thisIsMyKey", fileObject)
+    jsFileHandler.SaveToSessionStorage("thisIsMyKey", fileObject)
     
     // Session Storage retreival
-     const myNewFileObject = GetFromSessionStorage("thisIsMyKey");
+     const myNewFileObject = jsFileHandler.GetFromSessionStorage("thisIsMyKey");
     
 </script>
 ```
