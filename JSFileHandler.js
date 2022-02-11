@@ -1,6 +1,6 @@
 (function () {
  
-    class JSFileUploader {
+    class JSFileHandler {
           /**
          * Proccess a file upload
          * @param  {[HTMLElement]} fileUploader html input id
@@ -144,5 +144,5 @@
         }
     }
 
-    window.JSFileUploader = JSFileUploader;
+    window.JSFileHandler = JSFileHandler;
 })()
