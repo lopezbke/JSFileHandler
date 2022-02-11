@@ -18,15 +18,15 @@ Example With An Upload Button
             // HTML Input Element that will upload files
             const fileUploaderElement = document.querySelector("#myFileInput");
 
-            // Instantiates a new JSFileUploader object and pass the HTML Element that contains the file attached
-            const jsfileUploader = new JSFileUploader(fileUploaderElement);
+            // Instantiates a new JSFileHandler object and pass the HTML Element that contains the file attached
+            const jsFileHandler= new JSFileHandler(fileUploaderElement);
 
             // Generates a file object example below:
             /*  { FileName : String, FileType: String, 
                 FileContent: Byte[], FileExtension: String, 
                 FileSize : String, LastModifiedDate: String}
                 */
-            const fileObject = await jsfileUploader.GenerateFileObject();
+            const fileObject = await jsFileHandler.GenerateFileObject();
 
         }
     </script>
@@ -44,11 +44,11 @@ Example With No Upload Button
       // Code must be inside an async function
         async function UploadFile(htmlElement) {
 
-            // Instantiates a new JSFileUploader object and pass the HTML Element that contains the file attached
-            const jsfileUploader = new JSFileUploader(htmlElement);
+            // Instantiates a new JSFileHandler object and pass the HTML Element that contains the file attached
+            const jsFileHandler = new JSFileHandler(htmlElement);
 
             // Generates a file object
-            const fileObject = await jsfileUploader.GenerateFileObject();
+            const fileObject = await jsFileHandler.GenerateFileObject();
 
         }
     </script>
@@ -76,7 +76,7 @@ GetFromLocalStorage()
 ```html
     
 <script>
-    const jsFileHandler = new JSFileUploader(htmlElement);
+    const jsFileHandler = new JSFileHandler(htmlElement);
     
     // Downloading a file is simple just pass in the FileCotent ByteArray and FileTyppe.
     jsFileHandler.DownloadFile({
